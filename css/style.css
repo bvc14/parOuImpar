@@ -1,0 +1,182 @@
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+body{
+    background-image: url(../img/back.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+p{
+    text-align: center;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.titulo img{
+    width: 40%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+input{
+    width: 70%;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+}
+
+input[type="button"]{
+    font-size: 100%;
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(18, 81, 219);
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.699) 0px 5px 15px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+input[type="button"]:hover{
+    transform: scale(1.1);
+    background-color: rgb(125, 251, 255);
+    color: #000;
+    font-weight: bolder;
+}
+
+input[type="button"]:active{
+    transform: scale(1);
+    box-shadow: rgba(255, 255, 255, 0.13) 0px 5px 15px;
+}
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.opcoes a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 30px;
+    border: 1px solid yellow;
+    border-radius: 30px;
+    text-shadow: #000 0px 0px 10px;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+
+.opcoes a:hover{
+    color: rgb(125, 251, 255);
+    transform: scale(1.1);
+    font-weight: bold;
+    border: 1px solid  rgb(255, 125, 125);
+}
+
+#btnSecundario:hover{
+    color: rgb(255, 125, 125);
+    border: 1px solid rgb(125, 251, 255);
+}
+
+.telaInicio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000000e0;
+    box-shadow: rgba(40, 255, 255, 0.692) 0px 10px 15px 0px;
+    border-radius: 10px;
+    width: 70%;
+    padding: 20px;
+
+}
+
+.telaInicio > div {
+    margin: 50px;
+    display: flex;
+}
+
+.telaInicio > div > a{
+    margin: 20px;
+    font-size: 30px;
+}
+
+h1 {
+    animation: roll 3s linear infinite;
+    font-size: 50px;
+    margin-top: 50px;
+    text-shadow: #fff 0px 0px 2px;
+  }
+
+
+@keyframes roll {
+    0% {
+        transform: translateY(50%);
+        color: rgb(151, 229, 255);
+    }
+    50% {
+      transform: translateY(-50%);
+      color: rgb(255, 0, 0);
+    }
+
+    100% {
+      transform: translateY(50%);
+      color: rgb(151, 229, 255);
+    }
+  }
+  
+ 
+  
+
+  @media (max-width: 1000px) {
+    input{
+        width: 90%;
+    }
+    h1{
+        font-size: 30px;
+    }
+
+    .telaInicio{
+        width: 90%;
+    }
+    
+    .telaInicio > div > a{
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .telaInicio > div {
+        flex-direction: column;
+    }
+
+}
+

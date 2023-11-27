@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', sans-serif;
+    cursor: url(../cursor/seta.png), auto;
+}
+
+body {
+    height: 100vh;
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+    background-image: url(../img/backGame.gif);
+    height: 10%;
+}
+
+header div {
+    display: flex;
+    margin: 10px;
+}
+
+p {
+    font-size: 25px;
+    margin: 10px;
+    color: #E6E600;
+    text-align: center;
+    text-shadow: 1px 1px 0px #ffffff;
+}
+
+span {
+    color: #fff;
+    margin: 2px;
+    text-shadow: 1px 1px 0px #e4e425;
+}
+
+.nivel select {
+    background-color: #FFFFA8;
+    box-shadow: 1px 1px 0px #ffffff;
+    border-radius: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 10px;
+    cursor: url(../cursor/pointer.png), auto;
+}
+
+.btns img {
+    margin: 5px;
+    border-radius: 30%;
+    box-shadow: #FFFFA8 2px 1px 0px;
+    cursor: url(../cursor/pointer.png), auto;
+    width: 60px;
+    transition: all 0.2s;
+}
+
+.btns img:hover {
+    transform: scale(1.1);
+}
+
+.btns img:active {
+    transform: scale(1);
+}
+
+#btnPausar,
+#btnParar {
+    display: none;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    background-color: #000;
+    background-image: url(../img/dogeAcerto.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: moverFundo 10s linear infinite;
+}
+
+@keyframes moverFundo {
+    0% {
+        background-position: 0% 0;
+    }
+
+    25% {
+        background-position: 100% 0;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    75% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0;
+    }
+}
+
+#numAleatorio {
+    cursor: url(../cursor/pointer.png), auto;
+    font-size: 250px;
+    color: #fff;
+    text-shadow: 10px 10px 0px #e4e425;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 30vh;
+        flex-direction: column;
+    }
+
+    header div {
+        flex-direction: column;
+    }
+
+    main {
+        flex-direction: column;
+        height: 40vh;
+        background-size: 20%;
+    }
+
+    footer {
+        flex-direction: row;
+        height: 30vh;
+        width: 100%;
+        margin: auto;
+        margin-bottom: 0px;
+    }
+
+    .btns {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nivel select {
+        width: 100%;
+        font-size: 15px;
+        padding: 2px;
+    }
+
+    #numAleatorio {
+        font-size: 100px;
+        text-shadow: 5px 5px 0px #e4e425;
+    }
+
+    p {
+        font-size: 15px;
+    }
+}
